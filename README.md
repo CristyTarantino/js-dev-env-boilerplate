@@ -22,3 +22,30 @@ Note: The -s flag is optional. It enables silent mode which suppresses unnecessa
 4. Don't run the project from a symbolic link. It will cause issues with file watches.
 5. Having linting issues? Delete any .eslintrc that you're storing in your user directory. Also, disable any ESLint plugin / custom rules that you've enabled within your editor.
 6. Nothing above work? Delete your node_modules folder and re-run yarn install.
+
+## Why CI server
+
+The tipical developer answer: "It works on my machine!?"
+
+- Forgot to commit new file
+- Forgot to update package.json
+- Commit doesn't run cross-platform
+- Node version conflicts
+- Bad Merge
+- Pushed without running tests
+
+### A CI server catches mistaches quickly. Because:
+
+- Run automated build
+- Run tests
+- Check code coverage
+- Automate deployment
+
+### Some Options for CI servers
+
+- Travic   (runs on Linux)
+- Appveyor (runs on Windows)
+- Jenkins
+- CirleCI
+- Semaphore
+- SnapCI

@@ -8,8 +8,11 @@ import config from '../webpack.config.dev';
 
 const port = 3000;
 const app = express();
+
+// call webpack and pass in the config we referenced above
 const compiler = webpack(config);
 
+// tell express to use our webpack dev middleware using the compiler
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath

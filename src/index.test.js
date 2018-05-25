@@ -9,6 +9,7 @@ describe('Our first test', () => {
 });
 
 describe('index.html', () => {
+	// done is for async tests
   it('should have h1 that says Users', (done) => {
     const index = fs.readFileSync('./src/index.html', "utf-8");
     jsdom.env(index, function(err, window) {
@@ -18,4 +19,4 @@ describe('index.html', () => {
       window.close();
     });
   })
-})
+});
