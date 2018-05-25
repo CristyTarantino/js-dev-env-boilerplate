@@ -49,3 +49,5 @@ The tipical developer answer: "It works on my machine!?"
 - CirleCI
 - Semaphore
 - SnapCI
+- Codeship
+- Solano
