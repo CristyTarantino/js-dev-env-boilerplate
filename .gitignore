@@ -62,3 +62,6 @@ typings/
 
 # editor configs
 .idea/
+
+# db
+src/api/db.json
