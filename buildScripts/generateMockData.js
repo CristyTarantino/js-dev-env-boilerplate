@@ -11,6 +11,8 @@ import {schema} from './mockDataSchema';
 import fs from 'fs';
 import chalk from 'chalk';
 
+// generate fake json based on the defined schema
+// then convert to string
 const json = JSON.stringify(jsf(schema));
 
 fs.writeFile("./src/api/db.json", json, function (err) {

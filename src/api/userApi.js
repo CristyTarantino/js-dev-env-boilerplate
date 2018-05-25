@@ -1,4 +1,4 @@
-import 'whatwg-fetch';
+import 'whatwg-fetch'; //polyfill for fetch
 import getBaseUrl from './baseUrl';
 
 const baseUrl = getBaseUrl();

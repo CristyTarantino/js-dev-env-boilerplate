@@ -51,3 +51,45 @@ The tipical developer answer: "It works on my machine!?"
 - SnapCI
 - Codeship
 - Solano
+
+## Why Centralize API Calls
+
+- Configure all calls
+- Handle preloader logic
+- Handle errors
+- Single seam for mocking
+
+## Why a mock server for API
+
+What if we need a wide variety of data to build our app
+and the services we need to call don't exisr yet?
+
+- Unit Testing: Maybe you want to unit test your code so that your test run quickly and reliably, 
+or maybe the existing web services in your development or QA environment are slow
+or expencive to call.
+
+Instant response: Mocking HTTP means that you can receive consistently instantaneous responses.
+
+- Keep working when servers are down: Maybe the existing servers is unreliable. With the mock api you can keep working even if the servers are down.
+
+- Rapid prototyping: Or if you haven't decided how to design your web services,
+mocking allows you to rapidly prototype different potential
+response shapes and see how they work with your app.
+
+- Avoid inter-team bottlenecks: Perhaps a separate team is creating the service for your app,
+by mocking the service calls, you can start coding immediately and switch to hitting real web services when
+they're ready, you just need to agree on the API's proposed
+design and mock it accordingly, finally, maybe you need to 
+
+- Work Offline: Mocking allows you to continue working while you're offline.
+
+With JSON server you create a fake database using static JSON, then when you start up your JSON server
+it creates a web service that works with your static JSON behing the scenes, so when you delete, add or edit records,
+it actually updates the file.
+So this provides a full simulation of a real working API but against local mock data that's just sitting in a static
+file, this is really iseful because the app feels fully responsive and you don't have to go throught the work
+of standing up a local database and web server by hand.
+
+JSON schema faker generates fake data for you. You specify the data type you like, such as a string etc and it will generate random data which you can write to a file.
+
+
