@@ -61,7 +61,10 @@ typings/
 .next
 
 # editor configs
-.idea/
+.idea
 
 # db
 src/api/db.json
+
+# dist
+dist

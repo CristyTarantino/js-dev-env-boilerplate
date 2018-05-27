@@ -12,15 +12,15 @@
 <html lang="en">
 <head>
     <!--
-    The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html (since only webpack.config.prod.js provides the trackJS token)
+    The htmlWebpackPlugin will parse the logic below so that sentry.io is only added to the production version of index.html (since only webpack.config.prod.js provides the sentry.io token)
     This is an example of how to add features to index.html for only one environment.
    -->
-    <% if (htmlWebpackPlugin.options.trackJSToken) { %>
-    <!-- BEGIN TRACKJS -->
-    <script type="text/javascript">window._trackJs = { token: '<%=htmlWebpackPlugin.options.trackJSToken%>' };</script>
-    <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
-    <!-- END TRACKJS -->
-    <% } %>
+    <% if (htmlWebpackPlugin.options.RavenJSToken) { %>
+     <!-- BEGIN TRACKJS -->
+		<script type="text/javascript" src="https://cdn.ravenjs.com/3.25.2/raven.min.js" crossorigin="anonymous"></script>
+		<script type="text/javascript"> Raven.config("https://<%=htmlWebpackPlugin.options.RavenJSToken%>@sentry.io/1214302").install(); </script>
+		<!-- END TRACKJS -->
+		<% } %>
   <meta charset="UTF-8">
 </head>
 <body>

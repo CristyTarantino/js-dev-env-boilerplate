@@ -68,7 +68,7 @@ export default {
       inject: true,
       // Properties you define here are available in index.html
       // using htmlWebpackPlugin.options.varName
-      trackJSToken: 'INSERT YOUR TOKEN HERE'
+      RavenJSToken: 'b539bdaaf9b94678b27e7985cd5786d6'         //sentry.io
     })
 
     // Minify JS
