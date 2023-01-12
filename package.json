@@ -48,7 +48,7 @@
     "jsdom": "9.11.0",
     "json-schema-faker": "0.4.0",
     "json-server": "0.12.2",
-    "localtunnel": "1.9.0",
+    "localtunnel": "1.9.2",
     "mocha": "5.1.1",
     "nock": "9.2.5",
     "npm-run-all": "4.1.3",
